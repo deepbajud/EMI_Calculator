@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">EMI_Callculator</string>
+    <string name="enter_amount">Enter Amount</string>
+    <string name="enter_interest_rate">Enter Rate of Interest</string>
+    <string name="enter_months">Months</string>
+    <string name="calculate">Calculate</string>
+
+    <string name="app_logo_description">App Logo Description</string>
+
 </resources>

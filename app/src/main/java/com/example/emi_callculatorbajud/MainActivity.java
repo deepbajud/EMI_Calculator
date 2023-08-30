@@ -1,60 +1,45 @@
 package com.example.emi_callculatorbajud;
 
-
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText amount,intrest,month;
+    EditText amountEditText, interestEditText, monthsEditText;
+    TextView emiTextView;
+    Button calculateButton;
+    ImageView appLogoImageView;
 
-    TextView total,txtemi,txtintrest,calculate;
-
-    @SuppressLint({"WrongViewCast", "MissingInflatedId"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        amount = findViewById(R.id.amount);
-        intrest = findViewById(R.id.intrest);
-        month = findViewById(R.id.month);
-        calculate = findViewById(R.id.calculate);
-        txtemi = findViewById(R.id.txtemi);
-        total = findViewById(R.id.total);
-        txtintrest = findViewById(R.id.txtintrest);
+        amountEditText = findViewById(R.id.amount);
+        interestEditText = findViewById(R.id.interest);
+        monthsEditText = findViewById(R.id.months);
+        calculateButton = findViewById(R.id.calculateButton);
+        emiTextView = findViewById(R.id.emis);
 
-
-        calculate.setOnClickListener(new View.OnClickListener() {
+        calculateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                double principal = Double.parseDouble(amountEditText.getText().toString());
+                double interestRate = Double.parseDouble(interestEditText.getText().toString());
+                int months = Integer.parseInt(monthsEditText.getText().toString());
 
-                int amt = Integer.parseInt(amount.getText().toString());
-                double rest = Double.parseDouble(intrest.getText().toString());
-                int mon = Integer.parseInt(month.getText().toString());
+                double monthlyInterestRate = interestRate / (12 * 100);
+                double denominator = Math.pow(1 + monthlyInterestRate, months) - 1;
+                double emi = (principal * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, months)) / denominator;
 
-                double r = rest/(12*100);
-                double ans1 = 1;
-
-                for (int i = 0; i <mon ; i++) {
-                    ans1 *= (1+r);
-                }
-
-                double ans = amt * r * (ans1/(ans1-1));
-                DecimalFormat df = new DecimalFormat();
-                df.setMaximumFractionDigits(1);
-                txtemi.setText("EMI = "+df.format(ans));
-                double tamt = ans*mon;
-                total.setText("Total amount : "+df.format(tamt));
-                double iamt = tamt-amt;
-                txtintrest.setText("Intrest Amount : "+df.format(iamt));
+                DecimalFormat df = new DecimalFormat("#.##");
+                emiTextView.setText("EMI: " + df.format(emi));
             }
         });
     }

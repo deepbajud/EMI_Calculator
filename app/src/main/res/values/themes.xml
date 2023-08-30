@@ -3,6 +3,7 @@
     <style name="Base.Theme.EMI_Callculator" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+         <item name="android:statusBarColor">#B0AEB4</item>
     </style>
 
     <style name="Theme.EMI_Callculator" parent="Base.Theme.EMI_Callculator" />
