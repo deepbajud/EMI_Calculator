@@ -1,5 +1,8 @@
 # EMI_Calculator
-[![Download APK](https://img.shields.io/badge/Download-APK-blue)](https://drive.google.com/file/d/1ppSPygjqXZ3SNAAFb5pgB-mrGQvbXD3a/view?usp=sharing)
+<!--  [![Download APK](https://img.shields.io/badge/Download-APK-blue)](https://drive.google.com/file/d/1ppSPygjqXZ3SNAAFb5pgB-mrGQvbXD3a/view?usp=sharing) -->
+
+<a href="/deepbajud/EMI_Calculator/raw/master/app/app-debug.apk" class="Link__StyledLink-sc-14289xe-0 bJBoUI">[![Download APK](https://img.shields.io/badge/Download-APK-blue)]()</a>
+
 ## App-Overview
 
  <img 
