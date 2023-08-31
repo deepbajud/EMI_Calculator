@@ -4,7 +4,9 @@
 [![Download APK](https://img.shields.io/badge/Download-APK-blue)](https://github.com/deepbajud/EMI_Calculator/blob/master/app/app-debug.apk)
 
 
-## App-Overview
+## App-Preview
+
+This Android app is an EMI (Equated Monthly Installment) calculator designed to help users quickly compute their loan repayment amounts. The user interface consists of an attractive layout featuring an app logo, input fields for loan amount, interest rate, and loan tenure in months. A "Calculate" button triggers the computation, and the resulting EMI value is displayed beneath it. The app employs precise calculations based on user input to determine the EMI using the formula for loan amortization. With its intuitive design, this app offers a convenient way for users to estimate their monthly loan repayment obligations accurately.
 
  <img 
   width="30%"
