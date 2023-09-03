@@ -15,7 +15,6 @@ This Android app is an EMI (Equated Monthly Installment) calculator designed to 
 |:----------------------------------------:|:-----------------------------------------:|:-----------------------------------------:|
 | <img src= "1.png" width="80%" height="70%"> | <img src= "2.png" width="80%" height="70%"> | <img src= "3.png" width="80%" height="70%"> |
 | <img src= "4.png" width="80%" height="70%"> | <img src= "5.png" width="80%" height="70%"> | <img src= "6.png" width="80%" height="70%"> |
-
 |  | ![bloggif_64f1c75753a9f](https://github.com/deepbajud/Joke_App/assets/118447327/33c282f8-0340-41a1-913a-086246167d7d) >  |
 <!--## App-Preview
  <img 
